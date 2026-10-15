@@ -1,0 +1,17 @@
+version: 2
+
+# TODO: document and test every mart you build.
+#   fct_orders        -> order_id unique+not_null; customer_id relationships to
+#                        dim_customers; accepted_values on status
+#   fct_order_items   -> order_item_id unique+not_null; order_id relationships
+#                        to fct_orders
+#   dim_customers     -> customer_id unique+not_null
+#   fct_daily_sales   -> order_date unique+not_null
+#
+# Pull the status and order_amount descriptions from the doc blocks in docs.md
+# using "{{ doc('order_status') }}" and "{{ doc('order_amount') }}".
+#
+# Relationships / accepted_values tests nest their settings under `arguments:`
+# (see the example in _staging.yml).
+
+models: []

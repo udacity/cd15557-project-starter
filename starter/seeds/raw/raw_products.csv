@@ -1,0 +1,13 @@
+product_id,product_name,category_code,unit_price_cents
+1,Wireless Earbuds,ELEC,5999
+2,Bluetooth Speaker,ELEC,3499
+3,USB-C Charger,ELEC,1999
+4,Chef's Knife,HOME,4500
+5,Ceramic Mug Set,HOME,2400
+6,Cast Iron Skillet,HOME,3900
+7,Data Modeling 101,BOOK,3200
+8,The Analytics Handbook,BOOK,4100
+9,Yoga Mat,SPRT,2999
+10,Water Bottle,SPRT,1500
+11,Building Blocks Set,TOYS,2799
+12,Puzzle 1000pc,TOYS,1299

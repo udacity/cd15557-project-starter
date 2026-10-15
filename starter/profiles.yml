@@ -1,0 +1,10 @@
+brightly:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      # In the Udacity workspace this resolves to the pre-existing DuckDB file.
+      # Locally, set DBT_DUCKDB_PATH to point at your own copy.
+      path: "{{ env_var('DBT_DUCKDB_PATH', '/workspace/data/analytics.duckdb') }}"
+      schema: main
+      threads: 4

@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: brightly
+    description: "Raw Brightly retail tables, loaded into the raw schema as seeds."
+    schema: raw
+    tables:
+      - name: raw_customers
+        description: "One row per customer."
+        columns:
+          - name: customer_id
+            tests: [unique, not_null]
+      - name: raw_products
+        description: "One row per product in the catalog."
+        columns:
+          - name: product_id
+            tests: [unique, not_null]
+      - name: raw_orders
+        description: "One row per order (the order header)."
+        columns:
+          - name: order_id
+            tests: [unique, not_null]
+      - name: raw_order_items
+        description: "One row per line item within an order."
+        columns:
+          - name: order_item_id
+            tests: [unique, not_null]
+      - name: raw_payments
+        description: "One row per payment; cancelled orders have no payment."
+        columns:
+          - name: payment_id
+            tests: [unique, not_null]

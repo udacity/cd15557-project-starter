@@ -1,0 +1,22 @@
+name: 'brightly'
+version: '1.0.0'
+profile: 'brightly'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+seeds:
+  brightly:
+    raw:
+      +schema: raw
+
+models:
+  brightly:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table

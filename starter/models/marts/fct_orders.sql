@@ -1,0 +1,11 @@
+-- TODO: Build the order-grain fact table (one row per order).
+--
+-- IMPORTANT (avoid fan-out): roll the line items up to one row per order BEFORE
+-- joining them to the order header. Joining line items directly to the order
+-- would multiply the header row and double-count the totals. Do the same for
+-- payments. Start from the order header (stg_orders) and attach the aggregated
+-- item totals and payment total; orders with no items or no payment should still
+-- appear.
+--
+-- Columns: order_id, customer_id, order_date, status, num_items, order_amount,
+--          payment_amount, is_paid (true when the order has a payment)

@@ -1,0 +1,10 @@
+-- TODO: Build the intermediate model: one row per order line item, enriched
+-- with its product and category details.
+--
+-- Read from the staging models with ref(): start from the order line items,
+-- bring in the product details, then the product's category. Choose a join that
+-- keeps every line item even when its category is missing.
+--
+-- Columns: order_item_id, order_id, product_id, product_name, category_code,
+--          category_name, department, quantity, unit_price,
+--          item_amount (= quantity * unit_price)

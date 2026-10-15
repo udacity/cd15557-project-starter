@@ -1,0 +1,7 @@
+-- TODO: Build the line-item-grain fact table (one row per order line).
+--
+-- Read from int_order_items_enriched. The natural key order_item_id is the
+-- primary key for this grain (one row per line item).
+--
+-- Columns: order_item_id, order_id, product_id, product_name, category_name,
+--          department, quantity, unit_price, item_amount

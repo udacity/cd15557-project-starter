@@ -1,0 +1,10 @@
+-- TODO: Build the daily sales summary -- one row per day -- with a running
+-- (cumulative) revenue total.
+--
+-- Aggregate fct_orders to one row per order_date (num_orders, daily_revenue).
+-- Always exclude 'cancelled' orders. Exclude 'returned' by default too, but add a
+-- var('include_returns') flag (Jinja) so returns can be included when it is true.
+-- Add running_revenue as a cumulative total of daily_revenue ordered by date
+-- (use a WINDOW FUNCTION).
+--
+-- Columns: order_date, num_orders, daily_revenue, running_revenue

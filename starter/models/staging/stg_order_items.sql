@@ -1,0 +1,6 @@
+-- TODO: Build the staging model for order line items.
+-- Read from the `raw_order_items` source. Convert the cents column to dollars
+-- with the provided macro, exactly as stg_products.sql does.
+--
+-- Columns: order_item_id, order_id, product_id, quantity,
+--          {{ cents_to_dollars('unit_price_cents') }} as unit_price

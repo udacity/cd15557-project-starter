@@ -1,0 +1,7 @@
+version: 2
+
+# TODO: document the intermediate model (Task 6). Give int_order_items_enriched a
+# description and describe its key columns (order_item_id, item_amount), following
+# the pattern in _staging.yml.
+
+models: []

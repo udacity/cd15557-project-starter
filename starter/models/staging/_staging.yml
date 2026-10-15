@@ -1,0 +1,36 @@
+version: 2
+
+# The two built example models are documented and tested below.
+# TODO: add entries for the staging models you build (stg_orders,
+# stg_order_items, stg_payments, stg_product_categories) following this pattern.
+# Every model needs a description; keys need unique + not_null tests. Add an
+# accepted_values test on stg_orders.status and a relationships test from
+# stg_order_items.order_id to stg_orders.order_id.
+
+models:
+  - name: stg_customers
+    description: "Cleaned customers, one row per customer."
+    columns:
+      - name: customer_id
+        description: "Primary key for a customer."
+        tests: [unique, not_null]
+
+  - name: stg_products
+    description: "Cleaned products with price converted from cents to dollars."
+    columns:
+      - name: product_id
+        description: "Primary key for a product."
+        tests: [unique, not_null]
+      - name: unit_price
+        description: "List price in dollars (converted from cents)."
+
+  # - name: stg_orders
+  #   description: "..."
+  #   columns:
+  #     - name: order_id
+  #       tests: [unique, not_null]
+  #     - name: status
+  #       tests:
+  #         - accepted_values:
+  #             arguments:
+  #               values: ['placed', 'shipped', 'delivered', 'returned', 'cancelled']
