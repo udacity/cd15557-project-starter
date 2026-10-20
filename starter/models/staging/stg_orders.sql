@@ -1,0 +1,9 @@
+-- TODO: Build the staging model for orders.
+-- Follow stg_customers.sql as a pattern: select from the raw source and
+-- clean/type the columns. Read from the `raw_orders` source.
+--
+-- Columns to return: order_id, customer_id, order_date (cast to date), status
+--
+-- select
+--     ...
+-- from {{ source('brightly', 'raw_orders') }}

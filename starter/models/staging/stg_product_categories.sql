@@ -1,0 +1,5 @@
+-- TODO: Build the staging model for the category reference data.
+-- This one reads from the SEED, not a source, so use ref() (not source()):
+--   from {{ ref('product_categories') }}
+--
+-- Columns: category_code, category_name, department

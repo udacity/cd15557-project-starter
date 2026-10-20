@@ -1,0 +1,6 @@
+-- TODO: Build the staging model for payments.
+-- Read from the `raw_payments` source. Convert amount_cents to dollars with
+-- the cents_to_dollars macro.
+--
+-- Columns: payment_id, order_id, payment_method,
+--          cents_to_dollars('amount_cents') as amount, payment_date (cast to date)

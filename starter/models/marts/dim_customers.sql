@@ -1,0 +1,13 @@
+-- TODO: Build the customer dimension (one row per customer) with lifetime
+-- measures and a value rank.
+--
+-- Start from stg_customers and bring in each customer's orders (join to
+-- fct_orders for the order amount, and exclude cancelled orders). Use a join
+-- that keeps every customer, even one with no orders.
+--
+-- Per customer, compute: lifetime_orders, lifetime_value (sum of order amounts),
+-- first_order_date, last_order_date. Then add value_rank with a WINDOW FUNCTION
+-- that ranks customers by lifetime_value (highest = 1).
+--
+-- Columns: customer_id, first_name, last_name, email, country, lifetime_orders,
+--          lifetime_value, first_order_date, last_order_date, value_rank
