@@ -7,6 +7,12 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 test-paths: ["tests"]
 
+# Project variables. include_returns controls whether 'returned' orders count
+# toward revenue in fct_daily_sales. Excluded by default; override at run time
+# with: dbt build --vars 'include_returns: true'
+vars:
+  include_returns: false
+
 seeds:
   brightly:
     raw:
