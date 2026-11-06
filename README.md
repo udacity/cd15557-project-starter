@@ -34,9 +34,9 @@ Files to complete are marked with `TODO`.
 
 ```bash
 cd /workspace
-DBT_PROFILES_DIR=/workspace /opt/venv/bin/dbt build    # seed + run + test
-DBT_PROFILES_DIR=/workspace /opt/venv/bin/dbt docs generate
-DBT_PROFILES_DIR=/workspace /opt/venv/bin/dbt docs serve --host 0.0.0.0 --port 8580
+dbt build    # seed + run + test
+dbt docs generate
+dbt docs serve --host 0.0.0.0 --port 8580
 ```
 
 `dbt build` runs your models in dependency order and then all tests. When
