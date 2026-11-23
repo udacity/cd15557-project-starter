@@ -13,14 +13,14 @@ models:
     columns:
       - name: customer_id
         description: "Primary key for a customer."
-        tests: [unique, not_null]
+        data_tests: [unique, not_null]
 
   - name: stg_products
     description: "Cleaned products with price converted from cents to dollars."
     columns:
       - name: product_id
         description: "Primary key for a product."
-        tests: [unique, not_null]
+        data_tests: [unique, not_null]
       - name: unit_price
         description: "List price in dollars (converted from cents)."
 
@@ -28,9 +28,9 @@ models:
   #   description: "..."
   #   columns:
   #     - name: order_id
-  #       tests: [unique, not_null]
+  #       data_tests: [unique, not_null]
   #     - name: status
-  #       tests:
+  #       data_tests:
   #         - accepted_values:
   #             arguments:
   #               values: ['placed', 'shipped', 'delivered', 'returned', 'cancelled']
